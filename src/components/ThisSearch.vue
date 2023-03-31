@@ -12,10 +12,10 @@ export default {
 
 <template>
     <div class="containerSearch">
-        <input type="text" placeholder="Cerca Film">
-        <button>Search</button>
+        <input type="text" placeholder="Cerca Film" v-model="store.search">
+        <button @click="$emit('searchText')">Search</button>
 
     </div>
 </template>
 
-<style></style>
+<style lang="scss"></style>
