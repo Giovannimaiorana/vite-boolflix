@@ -1,13 +1,13 @@
 <script >
 import ThisSearch from './components/ThisSearch.vue';
-import ThisList from './components/ThisList.vue'
+import ThisListFilm from './components/ThisListFilm.vue'
 import { store } from './store.js'
 import axios from 'axios';
 
 export default {
   components: {
     ThisSearch,
-    ThisList,
+    ThisListFilm,
   },
   data() {
     return {
@@ -45,7 +45,7 @@ export default {
   </header>
 
   <main>
-    <ThisList />
+    <ThisListFilm />
   </main>
 </template>
 
