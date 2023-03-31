@@ -4,27 +4,27 @@ export default {
     props: {
         titolo: String,
         OrTitle: String,
-        OrLang: String,
+        language: String,
         vote: Number,
     },
     data() {
         return {
-            flag: ''
+            flag: '',
         }
     },
     methods: {
         languageFlag() {
-            if (this.OrLang == 'en') {
-                this.flag = '<img src="/enghFlag.jpg"';
-            } else if (this.OrLang == 'it') {
-                this.flag = 'img src="/itaFlag.jpg"';
+            if (this.language == 'en') {
+                this.flag = '<img src="/enghFlag.jpg" alt="en">';
+            } else if (this.language == 'it') {
+                this.flag = '<img src="/itaFlag.jpg" alt="it">';
             } else {
-                this.flag = this.OrLang;
+                this.flag = this.language;
             }
         }
     },
     created() {
-        this.languageFlag;
+        this.languageFlag();
     }
 }
 </script>
@@ -40,7 +40,18 @@ export default {
 
 <style scoped lang="scss">
 .containerCardFilm {
-    width: 200px;
+    max-width: 500px;
+    border: 2px solid black;
+    padding: 10px;
+
+    span {
+        width: 10px;
+
+        img {
+            width: 10px;
+        }
+    }
+
 
 }
 </style>
