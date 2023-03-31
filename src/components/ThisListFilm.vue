@@ -17,7 +17,7 @@ export default {
 <template>
     <div class="containerFilm" v-for="element in store.film ">
         <ThisFilm :titolo="element.title" :OrTitle="element.original_title" :language="element.original_language"
-            :vote="element.vote_average" :immagine="element.poster_path" />
+            :vote="Math.floor(element.vote_average / 2)" :immagine="element.poster_path" />
     </div>
 </template>
 
