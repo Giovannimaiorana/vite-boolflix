@@ -52,20 +52,26 @@ export default {
 <template>
     <div class="containerCardFilm">
         <div><img :src="imgApi"></div>
-        <h1>{{ titolo }}</h1> <!--Titolo -->
-        <h2>{{ OrTitle }}</h2><!--Titolo Originale -->
-        <span v-html="flag"></span>
+        <h3>{{ titolo }}</h3> <!--Titolo -->
+        <h4>{{ OrTitle }}</h4><!--Titolo Originale -->
+        <!--<span v-html="flag"></span>-->
+
         <h6 v-html="star"></h6><!--Voto -->
     </div>
 </template>
 
 <style scoped lang="scss">
 .containerCardFilm {
-
-    max-width: 500px;
+    max-width: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     border: 2px solid black;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 20px;
+
+
 }
 </style>

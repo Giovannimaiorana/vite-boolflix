@@ -17,9 +17,10 @@ export default {
 </script>
 
 <template>
+    <h3 v-if="store.serie.length > 0">Lista film</h3>
     <div class="containerSerie" v-for="element in store.serie">
         <ThisFilm :titolo="element.name" :OrTitle="element.original_name" :language="element.original_language"
-            :vote="element.vote_average" />
+            :vote="element.vote_average" :immagine="element.backdrop_path" />
 
 
     </div>
