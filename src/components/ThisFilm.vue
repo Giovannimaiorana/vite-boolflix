@@ -43,15 +43,5 @@ export default {
     max-width: 500px;
     border: 2px solid black;
     padding: 10px;
-
-    span {
-        width: 10px;
-
-        img {
-            width: 10px;
-        }
-    }
-
-
 }
 </style>

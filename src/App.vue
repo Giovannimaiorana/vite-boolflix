@@ -1,6 +1,7 @@
 <script >
 import ThisSearch from './components/ThisSearch.vue';
 import ThisListFilm from './components/ThisListFilm.vue'
+import ThisListSeries from './components/ThisListSeries.vue';
 import { store } from './store.js'
 import axios from 'axios';
 
@@ -8,6 +9,7 @@ export default {
   components: {
     ThisSearch,
     ThisListFilm,
+    ThisListSeries,
   },
   data() {
     return {
@@ -46,6 +48,8 @@ export default {
 
   <main>
     <ThisListFilm />
+    <h1>SerieTv</h1>
+    <ThisListSeries />
   </main>
 </template>
 

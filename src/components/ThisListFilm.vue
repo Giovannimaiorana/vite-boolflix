@@ -21,9 +21,4 @@ export default {
     </div>
 </template>
 
-<style scoped lang="scss">
-.containerFilm {
-    display: flex;
-    flex-wrap: wrap;
-}
-</style>
+<style scoped lang="scss"></style>
