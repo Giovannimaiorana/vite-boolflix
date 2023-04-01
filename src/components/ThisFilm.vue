@@ -67,7 +67,6 @@ export default {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    border: 2px solid black;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 20px;

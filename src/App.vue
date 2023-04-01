@@ -47,13 +47,15 @@ export default {
   </header>
 
   <main>
-    <ThisListFilm />
-    <h1>SerieTv</h1>
-    <ThisListSeries />
+    <div class="containerMain">
+      <ThisListFilm />
+      <ThisListSeries />
+    </div>
+
   </main>
 </template>
 
-<style scoped lang="scss">
+<style  lang="scss">
 * {
   margin: 0;
   padding: 0;

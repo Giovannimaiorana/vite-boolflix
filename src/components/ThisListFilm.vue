@@ -16,15 +16,25 @@ export default {
 
 <template>
     <h3 v-if="store.film.length > 0">Lista film</h3>
-    <div class="containerFilm" v-for="element in store.film ">
-        <ThisFilm :titolo="element.title" :OrTitle="element.original_title" :language="element.original_language"
-            :vote="Math.floor(element.vote_average / 2)" :immagine="element.poster_path" />
+    <div class="containerContentFilm">
+        <div class="containerFilm" v-for="(element, i ) in store.film " :key="i">
+            <ThisFilm :titolo="element.title" :OrTitle="element.original_title" :language="element.original_language"
+                :vote="Math.floor(element.vote_average / 2)" :immagine="element.poster_path" />
+        </div>
     </div>
 </template>
 
 <style scoped lang="scss">
-.containerFilm {
+.containerContentFilm {
     display: flex;
+    justify-content: center;
     flex-wrap: wrap;
+    max-width: 90%;
+
+}
+
+.containerFilm {
+
+    margin: 20px;
 }
 </style>
