@@ -32,6 +32,15 @@ export default {
         <div class="containerinfo">
             <div class="logotext">
                 <img src="/logosearch.png" alt="">
+                <img src="/textfx.png" alt="">
+            </div>
+            <div>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore accusamus a corporis porro eum?
+                    Esse, vel saepe iure quod alias expedita vero quas tempore minus quam incidunt aliquam odio.</p>
+            </div>
+            <div class="containerbutton">
+                <button> Riproduci</button>
+                <button>Altre Info </button>
 
             </div>
         </div>
@@ -55,14 +64,20 @@ export default {
 
     .containerinfo {
         width: 700px;
-        height: 350px;
+        height: 200px;
         position: absolute;
         left: 20px;
-        top: 100px;
-        border: 1px solid black;
+        top: 150px;
+
+
+        p {
+            font-size: 20px;
+            font-weight: bolder;
+        }
 
         img {
-            width: 60px;
+            width: 70px;
+            margin-right: 10px;
 
         }
     }
@@ -93,6 +108,19 @@ export default {
             width: 200px;
             margin-left: 20px;
         }
+
+
+    }
+
+    .containerbutton {
+        button {
+            border-radius: 5px;
+            border: none;
+            width: 150px;
+            height: 40px;
+            margin-top: 30px;
+            margin-right: 20px
+        }
     }
 
 
@@ -111,11 +139,15 @@ export default {
         }
 
         button {
+            cursor: pointer;
             width: 50px;
             height: 30px;
             background-color: black;
             color: grey;
             border: 1px solid grey;
+            padding: 10px;
+
+
         }
     }
 }

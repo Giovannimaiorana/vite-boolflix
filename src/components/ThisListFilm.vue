@@ -34,7 +34,6 @@ export default {
 }
 
 .containerFilm {
-
     margin: 20px;
 }
 </style>
