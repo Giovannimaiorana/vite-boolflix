@@ -15,7 +15,7 @@ export default {
 </script>
 
 <template>
-    <h3 v-if="store.trendingFilm.length > 0">Film Popolari in questa settimana </h3>
+    <h3 v-if="store.trending.length > 0">Film Popolari in questa settimana </h3>
     <div class="containerContentFilm">
 
         <div class="containerFilm" v-for="(element, i ) in store.trendingFilm " :key="i">

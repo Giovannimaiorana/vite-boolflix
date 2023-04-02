@@ -20,9 +20,9 @@ export default {
             <img src="/logo.png" alt="">
             <ul>
                 <li>Home</li>
-                <li @click="$emit('trendingtv')">Serie Tv</li>
-                <li @click="$emit('trendingfilm')">Film</li>
-                <li>Nuovi e Popolari</li>
+                <li>Serie Tv</li>
+                <li>Film</li>
+                <li @click="$emit('trendingfilm')">Nuovi e Popolari</li>
                 <li>La Mia Lista</li>
                 <li>Sfoglia per Lingua</li>
 

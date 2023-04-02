@@ -40,10 +40,10 @@ export default {
     },
     getTrandingFilm() {
       let generalApi = 'https://api.themoviedb.org/3/trending';
-      let filmTrending = generalApi += '/movie/week?api_key=f15f93ea472c6620277f22eb5179fd0d';
+      let filmTrending = generalApi += '/all/week?api_key=f15f93ea472c6620277f22eb5179fd0d';
       axios.get(filmTrending)
         .then(response => {
-          this.store.trendingFilm = response.data.results;
+          this.store.trending = response.data.results;
         })
 
     }
