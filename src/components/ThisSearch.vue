@@ -1,4 +1,5 @@
 <script>
+import axios from 'axios';
 import { store } from '../store.js'
 export default {
     name: 'ThisSearch',
@@ -6,6 +7,9 @@ export default {
         return {
             store
         }
+    },
+    methods: {
+
     }
 }
 </script>
@@ -16,8 +20,8 @@ export default {
             <img src="/logo.png" alt="">
             <ul>
                 <li>Home</li>
-                <li>Serie Tv</li>
-                <li>Film</li>
+                <li @click="$emit('trendingtv')">Serie Tv</li>
+                <li @click="$emit('trendingfilm')">Film</li>
                 <li>Nuovi e Popolari</li>
                 <li>La Mia Lista</li>
                 <li>Sfoglia per Lingua</li>
