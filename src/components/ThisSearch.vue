@@ -35,8 +35,11 @@ export default {
                 <img src="/textfx.png" alt="">
             </div>
             <div>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe dolore accusamus a corporis porro eum?
-                    Esse, vel saepe iure quod alias expedita vero quas tempore minus quam incidunt aliquam odio.</p>
+                <p>Diretto da William Malone, agli effetti speciali di questo film troviamo i fratelli Skotak che
+                    lavoreranno al sequel di Alien. L’equipaggio della Shenandoah arriva su Titan, una luna di Saturno, per
+                    esaminare dei misteriosi oggetti forse di origine aliena. Lì scoprono che i tedeschi hanno già mandato
+                    una loro astronave, ma quando chiedono aiuto dopo un brutto atterraggio trovano l’equipaggio tedesco
+                    massacrato da una creatura antica appena risvegliatasi.</p>
             </div>
             <div class="containerbutton">
                 <button> Riproduci</button>
@@ -145,9 +148,6 @@ export default {
             background-color: black;
             color: grey;
             border: 1px solid grey;
-            padding: 10px;
-
-
         }
     }
 }

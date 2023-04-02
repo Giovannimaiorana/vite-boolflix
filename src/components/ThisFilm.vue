@@ -26,7 +26,7 @@ export default {
             }
         },
         getImg() {
-            let generalImg = 'https://image.tmdb.org/t/p/w300';
+            let generalImg = 'https://image.tmdb.org/t/p/w342';
             this.imgApi = generalImg + this.immagine;
 
         },
@@ -58,8 +58,10 @@ export default {
                 <h3>{{ titolo }}</h3> <!--Titolo -->
                 <h4>{{ OrTitle }}</h4><!--Titolo Originale -->
                 <!--<span v-html="flag"></span>-->
-
                 <h6 v-html="star"></h6><!--Voto -->
+            </div>
+            <div>
+
             </div>
         </div>
 
@@ -90,23 +92,27 @@ export default {
     .cardBack {
         position: absolute;
         top: 50%;
-        width: 100%;
+
         display: flex;
+        justify-content: center;
         flex-direction: column;
         align-items: center;
         display: none;
-
     }
 
     .cardFront:hover .cardBack {
         display: flex;
         width: 350px;
+
     }
 
     .cardFront:hover {
         img {
             filter: opacity(30%);
+
         }
+
+
     }
 
     div {
@@ -116,5 +122,7 @@ export default {
             border-radius: 5px;
         }
     }
+
+
 }
 </style>

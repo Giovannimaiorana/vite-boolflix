@@ -19,6 +19,7 @@ export default {
 <template>
     <h3 v-if="store.serie.length > 0">Lista Serie</h3>
     <div class="containerContentSerie">
+
         <div class="containerSerie" v-for="(element, i ) in store.serie" :key="i">
             <ThisFilm :titolo="element.name" :OrTitle="element.original_name" :language="element.original_language"
                 :vote="element.vote_average" :immagine="element.backdrop_path" />
@@ -27,11 +28,21 @@ export default {
 </template>
 
 <style scoped lang="scss">
+h3 {
+    color: grey;
+    font-weight: bolder;
+    font-size: 30px;
+    text-align: center;
+    padding: 10px;
+}
+
 .containerContentSerie {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    max-width: 90%;
+    max-width: 100%;
+
+
 
     .containerSerie {
         margin: 20px;
