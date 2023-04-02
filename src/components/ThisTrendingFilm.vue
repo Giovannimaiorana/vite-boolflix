@@ -18,7 +18,7 @@ export default {
     <h3 v-if="store.trending.length > 0">Film Popolari in questa settimana </h3>
     <div class="containerContentFilm">
 
-        <div class="containerFilm" v-for="(element, i ) in store.trendingFilm " :key="i">
+        <div class="containerFilm" v-for="(element, i ) in store.trending " :key="i">
             <ThisFilm :titolo="element.title" :OrTitle="element.original_title" :language="element.original_language"
                 :vote="Math.floor(element.vote_average / 2)" :immagine="element.poster_path" />
         </div>

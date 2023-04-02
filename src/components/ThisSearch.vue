@@ -23,8 +23,7 @@ export default {
                 <li>Serie Tv</li>
                 <li>Film</li>
                 <li @click="$emit('trendingfilm')">Nuovi e Popolari</li>
-                <li>La Mia Lista</li>
-                <li>Sfoglia per Lingua</li>
+
 
             </ul>
         </div>
