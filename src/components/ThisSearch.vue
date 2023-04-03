@@ -20,6 +20,7 @@ export default {
             <img src="/logo.png" alt="">
             <ul>
                 <li>Home</li>
+
                 <li @click="$emit('trendingfilm')">Nuovi e Popolari</li>
                 <li @click="$emit('allfilm')">In uscita</li>
 
@@ -27,7 +28,7 @@ export default {
             </ul>
         </div>
         <div class="containerSearch">
-            <input type="text" placeholder="Cerca Film" v-model="store.search">
+            <input type="text" placeholder="Cerca Film" v-model="store.search" @keyup.enter="$emit('searchText')">
             <button @click="$emit('searchText')"><i class="fa-solid fa-magnifying-glass"></i></button>
 
         </div>

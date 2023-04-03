@@ -3,8 +3,9 @@ import ThisSearch from './components/ThisSearch.vue';
 import ThisListFilm from './components/ThisListFilm.vue'
 import ThisListSeries from './components/ThisListSeries.vue';
 import ThisTrandingFilm from './components/ThisTrendingFilm.vue';
-import ThisAllFilm from './components/ThisAllFilm.vue'
-import ThisLoading from './components/ThisLoading.vue'
+import ThisAllFilm from './components/ThisAllFilm.vue';
+import ThisLoading from './components/ThisLoading.vue';
+import ThisHome from './components/ThisHome.vue'
 import { store } from './store.js'
 import axios from 'axios';
 
@@ -16,6 +17,7 @@ export default {
     ThisTrandingFilm,
     ThisAllFilm,
     ThisLoading,
+    ThisHome,
   },
   data() {
     return {
@@ -59,6 +61,7 @@ export default {
         })
     }
   }
+
 }
 
 </script>
@@ -74,6 +77,7 @@ export default {
       <ThisTrandingFilm />
       <ThisListFilm />
       <ThisListSeries />
+      <ThisHome />
     </div>
 
   </main>

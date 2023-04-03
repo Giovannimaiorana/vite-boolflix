@@ -25,7 +25,8 @@ export default {
     </div>
 </template>
 
-<style>
+<style scoped lang="scss
+">
 .containerContentFilm {
     display: flex;
 
