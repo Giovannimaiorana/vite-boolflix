@@ -9,8 +9,10 @@ export default {
 
     },
     mounted() {
-        setTimeout(this.firstload, 1000);
-        this.store.loading = true
+        setTimeout(firstload => {
+            this.store.loading = false
+        }, 2000);
+
     }
 
 }
@@ -48,52 +50,80 @@ export default {
         width: 100px;
     }
 
+    5% {
+        width: 125px;
+    }
+
     10% {
         width: 150px;
     }
 
-    25% {
+    15% {
         width: 200px;
     }
 
-    35% {
+    20% {
         width: 250px;
     }
 
-    50% {
+    25% {
+        width: 300px;
+    }
+
+    30% {
         width: 350px;
     }
 
-    60% {
+    35% {
+        width: 400px;
+    }
+
+    40% {
+        width: 450px;
+    }
+
+    45% {
         width: 500px;
     }
 
-    65% {
+    50% {
         width: 550px;
     }
 
-    70% {
+    55% {
         width: 600px;
     }
 
-    75% {
+    60% {
         width: 650px;
     }
 
-    80% {
+    65% {
         width: 700px;
     }
 
-    85% {
+    70% {
         width: 750px;
     }
 
+    75% {
+        width: 800px;
+    }
+
+    80% {
+        width: 850px;
+    }
+
+    85% {
+        width: 900px;
+    }
+
     90% {
-        width: 1000px;
+        width: 850px;
     }
 
     95% {
-        width: 850px;
+        width: 800px;
     }
 
     100% {
