@@ -8,6 +8,7 @@ import ThisLoading from './components/ThisLoading.vue';
 import ThisHome from './components/ThisHome.vue'
 import { store } from './store.js'
 import axios from 'axios';
+import { onMounted } from 'vue';
 
 export default {
   components: {
@@ -59,9 +60,13 @@ export default {
         .then(response => {
           this.store.newFilm = response.data.results;
         })
-    }
-  }
 
+    },
+
+
+
+
+  }
 }
 
 </script>
@@ -94,5 +99,9 @@ export default {
 
 body {
   background-color: black;
+}
+
+.bandiera {
+  width: 20px;
 }
 </style>

@@ -10,24 +10,24 @@ export default {
     },
     data() {
         return {
-            flag: '',
-            imgApi: '',
+
+
             star: '',
         }
     },
     methods: {
         languageFlag() {
             if (this.language == 'en') {
-                this.flag = '<img src="/enghFlag.jpg" alt="en">';
+                return '<img class="bandiera" src="/enghFlag.jpg" alt="en">';
             } else if (this.language == 'it') {
-                this.flag = '<img src="/itaFlag.jpg" alt="it">';
+                return '<img class="bandiera"  src="/itaFlag.jpg" alt="it">';
             } else {
-                this.flag = this.language;
+                return this.language;
             }
         },
         getImg() {
             let generalImg = 'https://image.tmdb.org/t/p/w342';
-            this.imgApi = generalImg + this.immagine;
+            return generalImg + this.immagine;
 
         },
         getValutation() {
@@ -42,8 +42,7 @@ export default {
         }
     },
     created() {
-        this.languageFlag();
-        this.getImg();
+
         this.getValutation();
     }
 }
@@ -53,11 +52,11 @@ export default {
     <div class="containerCardFilm">
 
         <div class="cardFront">
-            <div><img :src="imgApi"></div>
+            <div><img :src="getImg()"></div>
             <div class="cardBack">
                 <h3>{{ titolo }}</h3> <!--Titolo -->
                 <h4>{{ OrTitle }}</h4><!--Titolo Originale -->
-                <!--<span v-html="flag"></span>-->
+                <span v-html="languageFlag()"></span>
                 <h6 v-html="star"></h6><!--Voto -->
             </div>
             <div>
