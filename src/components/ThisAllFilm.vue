@@ -2,7 +2,7 @@
 import { store } from '../store.js'
 import ThisFilm from './ThisFilm.vue';
 export default {
-    name: 'thisTrendingFillm',
+    name: 'ThisAllFilm',
     components: {
         ThisFilm,
     },
@@ -15,17 +15,17 @@ export default {
 </script>
 
 <template>
-    <h3 v-if="store.trending.length > 0">Film Popolari in questa settimana </h3>
+    <h3 v-if="store.newFilm.length > 0"> Film in Uscita </h3>
     <div class="containerContentFilm">
 
-        <div class="containerFilm" v-for="(element, i ) in store.trending " :key="i">
+        <div class="containerFilm" v-for="(element, i ) in store.newFilm " :key="i">
             <ThisFilm :titolo="element.title" :OrTitle="element.original_title" :language="element.original_language"
                 :vote="Math.floor(element.vote_average / 2)" :immagine="element.poster_path" />
         </div>
     </div>
 </template>
 
-<style>
+<style scoped lang="scss">
 .containerContentFilm {
     display: flex;
 

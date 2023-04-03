@@ -5,5 +5,7 @@ export const store = reactive({
     serie: [],
     search: [],
     trending: [],
+    newFilm: [],
+    loading: false
 
 })

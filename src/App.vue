@@ -2,7 +2,9 @@
 import ThisSearch from './components/ThisSearch.vue';
 import ThisListFilm from './components/ThisListFilm.vue'
 import ThisListSeries from './components/ThisListSeries.vue';
-import ThisTrandingFilm from './components/ThisTrendingFilm.vue'
+import ThisTrandingFilm from './components/ThisTrendingFilm.vue';
+import ThisAllFilm from './components/ThisAllFilm.vue'
+import ThisLoading from './components/ThisLoading.vue'
 import { store } from './store.js'
 import axios from 'axios';
 
@@ -12,6 +14,8 @@ export default {
     ThisListFilm,
     ThisListSeries,
     ThisTrandingFilm,
+    ThisAllFilm,
+    ThisLoading,
   },
   data() {
     return {
@@ -46,6 +50,13 @@ export default {
           this.store.trending = response.data.results;
         })
 
+    },
+    getfilm() {
+      let film = 'https://api.themoviedb.org/3/movie/upcoming?api_key=f15f93ea472c6620277f22eb5179fd0d&language=en-US&page=1'
+      axios.get(film)
+        .then(response => {
+          this.store.newFilm = response.data.results;
+        })
     }
   }
 }
@@ -54,17 +65,19 @@ export default {
 
 <template>
   <header>
-    <ThisSearch @searchText="generalListFilmSeries()" @trendingfilm="getTrandingFilm()" />
+    <ThisSearch @searchText="generalListFilmSeries()" @trendingfilm="getTrandingFilm()" @allfilm="getfilm()" />
   </header>
 
   <main>
     <div class="containerMain">
+      <ThisAllFilm />
       <ThisTrandingFilm />
       <ThisListFilm />
       <ThisListSeries />
     </div>
 
   </main>
+  <ThisLoading />
 </template>
 
 <style  lang="scss">
