@@ -7,7 +7,7 @@ import ThisAllFilm from './components/ThisAllFilm.vue';
 import ThisLoading from './components/ThisLoading.vue';
 import { store } from './store.js'
 import axios from 'axios';
-import { onMounted } from 'vue';
+
 
 export default {
   components: {
@@ -65,15 +65,12 @@ export default {
       axios.get(film)
         .then(response => {
           this.store.newFilm = response.data.results;
-
+          this.store.trending = '';
         })
 
     },
 
-
-
-
-  }
+  },
 }
 
 </script>
@@ -85,7 +82,6 @@ export default {
 
   <main>
     <div class="containerMain">
-      <ThisHomeList />
       <ThisAllFilm />
       <ThisTrandingFilm />
       <ThisListFilm />
