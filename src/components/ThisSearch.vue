@@ -12,9 +12,7 @@ export default {
     components: {
         ThisInfoJumbo,
     },
-    methods: {
 
-    }
 }
 </script>
 

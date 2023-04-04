@@ -5,7 +5,6 @@ import ThisListSeries from './components/ThisListSeries.vue';
 import ThisTrandingFilm from './components/ThisTrendingFilm.vue';
 import ThisAllFilm from './components/ThisAllFilm.vue';
 import ThisLoading from './components/ThisLoading.vue';
-import ThisHome from './components/ThisHome.vue'
 import { store } from './store.js'
 import axios from 'axios';
 import { onMounted } from 'vue';
@@ -18,7 +17,7 @@ export default {
     ThisTrandingFilm,
     ThisAllFilm,
     ThisLoading,
-    ThisHome,
+
   },
   data() {
     return {
@@ -34,14 +33,20 @@ export default {
       if (store.search.length > 0) {
         filmApi += `&query=${store.search}`;
         seriesApi += `&query=${store.search}`;
+        this.store.newFilm = '';
+        this.store.trending = '';
+
 
         axios.get(filmApi)
           .then(response => {
             this.store.film = response.data.results;
+
           }),
           axios.get(seriesApi)
             .then(response => {
               this.store.serie = response.data.results;
+
+
             })
       }
     },
@@ -51,6 +56,7 @@ export default {
       axios.get(filmTrending)
         .then(response => {
           this.store.trending = response.data.results;
+          this.store.newFilm = '';
         })
 
     },
@@ -59,6 +65,7 @@ export default {
       axios.get(film)
         .then(response => {
           this.store.newFilm = response.data.results;
+
         })
 
     },
@@ -78,11 +85,12 @@ export default {
 
   <main>
     <div class="containerMain">
+      <ThisHomeList />
       <ThisAllFilm />
       <ThisTrandingFilm />
       <ThisListFilm />
       <ThisListSeries />
-      <ThisHome />
+
     </div>
 
   </main>
